@@ -12,7 +12,7 @@
 <!-- ===== Imports ===== -->
 
     <xs:import namespace="UBLCommonBasicComponents"
-	schemaLocation="https://github.com/ggerardfl/UBL/blob/main/UBLCommonBasicComponentsSchema.xml"/>
+	schemaLocation="https://raw.githubusercontent.com/ggerardfl/UBL/refs/heads/main/UBLCommonBasicComponentsSchema.xml"/>
     
 <!-- ===== Aggregate Elements ===== -->
 
