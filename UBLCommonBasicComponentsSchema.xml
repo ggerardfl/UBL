@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File: UBLCommonBasicComponentsSchema.xml -->
+<!-- Simplified Extract UBL Common Basic Components schema -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="UBLCommonBasicComponents"
+    xmlns="UBLCommonBasicComponents"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+
+   <!-- Simple elements -->
+    <xs:element name="ID" type="xs:string"/>
+    <xs:element name="Name" type="xs:string"/>
+    <xs:element name="SalesOrderID" type="xs:string"/>
+    <xs:element name="IssueDate" type="xs:date"/>
+    <xs:element name="IssueTime" type="xs:string"/>
+    <xs:element name="InvoiceTypeCode" type="xs:string"/>
+    <xs:element name="Description" type="xs:string"/>
+    <xs:element name="AttributeID" type="xs:string"/>
+    <xs:element name="Measure" type="xs:string"/>
+    <xs:element name="StreetName" type="xs:string"/>
+    <xs:element name="BuildingNumber" type="xs:string"/>
+    <xs:element name="CityName" type="xs:string"/>
+    <xs:element name="PostalZone" type="xs:string"/>
+    <xs:element name="CountrySubentityCode" type="xs:string"/>
+    <xs:element name="IdentificationCode" type="xs:string"/>
+    <xs:element name="PriceTypeCode" type="xs:string"/>
+    <xs:element name="Note" type="xs:string"/>
+    <xs:element name="AcceptanceIndicator" type="xs:string"/>
+    <xs:element name="Telephone" type="xs:string"/>
+    <xs:element name="ElectronicMail" type="xs:string"/>
+    <xs:element name="CatalogueIndicator" type="xs:string"/>
+    <xs:element name="AccountingCostCode" type="xs:string"/>
+    <xs:element name="AccountingCost" type="xs:string"/>
+    <xs:element name="Signature" type="xs:string"/>
+    <xs:element name="DespatchDocumentReference" type="xs:string"/>
+    <xs:element name="RejectionNote" type="xs:string"/>
+	<xs:element name="CatalogueType" type="xs:string"/>
+	<xs:element name="WarrantyInformation" type="xs:string"/>
+	<xs:element name="ExtensionElement" type="xs:string"/>
+     	
+  <!-- Elements with simple content and attributes -->  
+   <!-- PriceAmount element -->
+    <xs:element name="PriceAmount">
+    <xs:complexType>
+    <xs:simpleContent>
+    	<xs:extension base="xs:decimal">
+	    <xs:attribute name="currencyID" type="xs:string" use="required"/>
+	 </xs:extension>
+    </xs:simpleContent>
+    </xs:complexType>
+    </xs:element>
+
+   <!-- BaseQuantity element -->
+    <xs:element name="BaseQuantity">
+    <xs:complexType>
+    <xs:simpleContent>
+	<xs:extension base="xs:decimal">
+	    <xs:attribute name="unitCode" type="xs:string" use="required"/>
+	</xs:extension>
+    </xs:simpleContent>
+    </xs:complexType>
+    </xs:element>
+
+   <!-- Quantity element -->
+    <xs:element name="Quantity">
+    <xs:complexType>
+    <xs:simpleContent>
+	<xs:extension base="xs:decimal">
+	    <xs:attribute name="unitCode" type="xs:string" use="required"/>
+	</xs:extension>
+    </xs:simpleContent>
+    </xs:complexType>
+    </xs:element>
+
+   <!-- LineExtensionAmount element -->
+    <xs:element name="LineExtensionAmount">
+    <xs:complexType>
+    <xs:simpleContent>
+	<xs:extension base="xs:decimal">
+	    <xs:attribute name="currencyID" type="xs:string" use="required"/>
+	</xs:extension>
+    </xs:simpleContent>
+    </xs:complexType>
+    </xs:element>
+
+   <!-- TotalTaxAmount element -->
+    <xs:element name="TotalTaxAmount">
+    <xs:complexType>
+    <xs:simpleContent>
+	<xs:extension base="xs:decimal">
+	    <xs:attribute name="currencyID" type="xs:string" use="required"/>
+	</xs:extension>
+    </xs:simpleContent>
+    </xs:complexType>
+    </xs:element>
+
+   <!-- ShippingCharge element -->
+    <xs:element name="ShippingCharge">
+    <xs:complexType>
+    <xs:simpleContent>
+	<xs:extension base="xs:decimal">
+	    <xs:attribute name="currencyID" type="xs:string" use="required"/>
+	</xs:extension>
+    </xs:simpleContent>
+    </xs:complexType>
+    </xs:element>
+
+   <!-- PayableAmount element -->
+    <xs:element name="PayableAmount">
+    <xs:complexType>
+    <xs:simpleContent>
+	<xs:extension base="xs:decimal">
+	    <xs:attribute name="currencyID" type="xs:string" use="required"/>
+	</xs:extension>
+    </xs:simpleContent>
+    </xs:complexType>
+    </xs:element>
+  
+  <!-- MinimumOrderQuantity element -->
+    <xs:element name="MinimumOrderQuantity">
+    <xs:complexType>
+    <xs:simpleContent>
+	<xs:extension base="xs:decimal">
+	    <xs:attribute name="unitCode" type="xs:string" use="required"/>
+	</xs:extension>
+    </xs:simpleContent>
+    </xs:complexType>
+    </xs:element>
+
+</xs:schema>
+ 
